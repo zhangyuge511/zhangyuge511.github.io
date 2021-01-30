@@ -6,7 +6,7 @@ var config = (function(){
     var objectCount = 9;
     var repeatCount = row * col / objectCount;
 
-    var time = 120;
+    var time = 51;
 
     var imgUrl = "./img/";
     var imgExtension = ".jpg";
