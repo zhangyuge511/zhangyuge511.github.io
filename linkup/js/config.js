@@ -9,7 +9,7 @@ var config = (function(){
     var time = 120;
 
     var imgUrl = "./img/";
-    var imgExtension = ".png";
+    var imgExtension = ".jpg";
     var imgByName = function (name) {
         var src = imgUrl + name + imgExtension;
         return `<img draggable="false" src="${src}"></img>`;
