@@ -2,8 +2,8 @@
 	el: '#main',
 	data: {
 		boardArr: [], //棋盘数组
-		breadth: 10, //行数
-		length: 6, //列数
+		breadth: 8, //行数
+		length: 4, //列数
 		typeLen: 9, //几个图片
 		objIJ: [-1, -1],
 		hoverIJ: [-1, -1],
