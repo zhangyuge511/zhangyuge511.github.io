@@ -2,8 +2,8 @@
 	el: '#main',
 	data: {
 		boardArr: [], //棋盘数组
-		breadth: 8, //行数
-		length: 4, //列数
+		breadth: 10, //行数
+		length: 6, //列数
 		typeLen: 9, //几个图片
 		objIJ: [-1, -1],
 		hoverIJ: [-1, -1],
@@ -47,7 +47,7 @@
 		checkRemove: function(data1, data2) {
 			var self = this;
 			if(self.boardArr[data1[0]][data1[1]].name != self.boardArr[data2[0]][data2[1]].name) {
-				_inputQueue.pushMessage("http://files.iiierp.com/voice/du.mp3");
+				// _inputQueue.pushMessage("http://files.iiierp.com/voice/du.mp3");
 				return;
 			}
 			if(data1[0] === data2[0]) {
@@ -77,7 +77,7 @@
 					return;
 				}
 			}
-			_inputQueue.pushMessage("http://files.iiierp.com/voice/du.mp3");
+			// _inputQueue.pushMessage("http://files.iiierp.com/voice/du.mp3");
 			//playVoice("http://files.iiierp.com/voice/du.mp3");
 		},
 		//水平路径
@@ -321,7 +321,7 @@
 			self.boardArr[data1[0]][data1[1]].name = 0;
 			self.boardArr[data2[0]][data2[1]].name = 0;
 			
-			_inputQueue.pushMessage("http://files.iiierp.com/voice/ju.mp3");
+			// _inputQueue.pushMessage("http://files.iiierp.com/voice/ju.mp3");
 			setTimeout(function(){
 				for(var i = 0; i < self.breadth; i++) {
 					for(var j = 0; j < self.length; j++) {
@@ -330,7 +330,7 @@
 				}
 				if(self.checkEnd()) {
 					alert('过关啦');
-					_inputQueue.pushMessage("http://files.iiierp.com/voice/alert.wav");
+					// _inputQueue.pushMessage("http://files.iiierp.com/voice/alert.wav");
 					self.breadth -= 2;
 					self.length -= 2;
 					self.creatGame();
