@@ -14,6 +14,7 @@ var View = (function(){
             game = g;
             this.initGrid(data.cell);
             if (this.checkImgLoad()) {
+                console.log("all img loaded");
                 document.getElementById("loading").style.display = "none";
                 this.updateTime(data.time);
                 return true;
