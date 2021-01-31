@@ -987,7 +987,7 @@ window.__require = function e(t, n, o) {
                         scale: .9
                     }).union().repeatForever().start()
                 }, t.prototype.update = function(e) {}, t.prototype.adsButtonFunc2 = function() {
-                    window.location.href = "https://zhangyuge511.github.io/linkup/"
+                    window.location.href = "/linkup?from=home"
                 }, t.prototype.bannerButtonFunc = function() {
                     // window.location.href = "https://weibo.com/u/3050783091"
                 }, t.prototype.ShowFailedUi = function(e, t) {

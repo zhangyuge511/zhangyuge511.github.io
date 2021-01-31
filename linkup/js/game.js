@@ -41,6 +41,12 @@ var Game = (function(){
 
         help: function () {
             this.judge.apply(this, hlepData);
+            if (data.time > 10) {
+                data.time = data.time - 10;
+            } else {
+                data.time = 1;
+            }
+            
         },
 
         update: function () {
@@ -317,7 +323,11 @@ var Game = (function(){
             setTimeout(function () {
                 var str = "已完成，确定再来一局吗？";
                 alert(str);
-                location.reload();
+                if (window.location.search.substr(1) == "from=home") {
+                    location.href = "/";
+                } else {
+                    location.reload();
+                }
             }, 50);
         },
         
