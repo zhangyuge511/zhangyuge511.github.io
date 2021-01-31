@@ -25,7 +25,10 @@ var Game = (function(){
 
         init : function(){
             this.start();
-            this.view.init(this,data);
+            var isView = this.view.init(this,data);
+            if (isView) {
+                this.updateTime();
+            }
         },
 
         start : function(){
@@ -51,7 +54,7 @@ var Game = (function(){
 
         update: function () {
 
-            this.updateTime();
+            // this.updateTime();
 
             window.requestAnimationFrame(this.update.bind(this));  
         },

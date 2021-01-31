@@ -16,18 +16,19 @@ var View = (function(){
             if (this.checkImgLoad()) {
                 document.getElementById("loading").style.display = "none";
                 this.updateTime(data.time);
+                return true;
             }
         },
         checkImgLoad: function() {
             let imgList = document.getElementsByTagName('img');//图片集合
             let imgCount = imgList.length;//图片总数
             let imgLoad = 0;//加载完成的图片数量
-       
+            console.log(imgCount);
             for (let i = 0; i < imgCount; i++) {
               imgList[i].onload = () => {
                 imgLoad++;
-                console.log(imgLoad);
                 if (imgLoad === imgCount) {
+                  console.log("all img loaded");
                   return true;
                 }
               }
