@@ -13,10 +13,11 @@ var View = (function(){
         init : function(g,data){
             game = g;
             this.initGrid(data.cell);
+            this.updateTime(data.time);
             if (this.checkImgLoad()) {
                 console.log("all img loaded");
                 document.getElementById("loading").style.display = "none";
-                this.updateTime(data.time);
+                
                 return true;
             }
         },

@@ -27,7 +27,7 @@ var Game = (function(){
             this.start();
             var isView = this.view.init(this,data);
             if (isView) {
-                this.update();
+                // this.update();
             }
         },
 
@@ -35,7 +35,7 @@ var Game = (function(){
             this.initCell();
             this.fillCell();
             this.checkDeadlock();
-            // this.update();
+            this.update();
         },
 
         restart: function () {
