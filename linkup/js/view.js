@@ -12,10 +12,28 @@ var View = (function(){
 
         init : function(g,data){
             game = g;
-            this.updateTime(data.time);
             this.initGrid(data.cell);
+            if (this.checkImgLoad()) {
+                document.getElementById("loading").style.display = "none";
+                this.updateTime(data.time);
+            }
         },
-
+        checkImgLoad: function() {
+            let imgList = document.getElementsByTagName('img');//图片集合
+            let imgCount = imgList.length;//图片总数
+            let imgLoad = 0;//加载完成的图片数量
+       
+            for (let i = 0; i < imgCount; i++) {
+              imgList[i].onload = () => {
+                imgLoad++;
+                console.log(imgLoad);
+                if (imgLoad === imgCount) {
+                  return true;
+                }
+              }
+            }
+            return false;
+        },
         updateTime: function (time) {
             timeDom.innerHTML = time;
         },
