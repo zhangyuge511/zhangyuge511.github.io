@@ -9,7 +9,7 @@
 			javascriptNode,
 			song = {
 				muted: true,
-				src: 'mp3/exampleSong.mp3',
+				src: 'mp3/mermaid.mp3',
 				loaded: true,
 				buffer: '',
 				blockDistance: 2000,
