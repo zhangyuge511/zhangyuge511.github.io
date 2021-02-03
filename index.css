@@ -1,0 +1,87 @@
+body{
+	font-family: '-apple-system','HelveticaNeue';
+}
+.container {
+	width:calc(100vw - 16px);
+	height:calc(100vh - 16px);
+	background-image:url("app/light.png");
+	background-size:50% auto;
+	background-position: center;
+	background-repeat:no-repeat;
+}
+.status-bar {
+	margin-top:10px;
+	height: 50px;
+	width: 50%;
+}
+.time {
+	position:fixed;
+	left:0;
+	color: white;
+	font-size: 3rem;
+	margin-left:5px;
+}
+.battery {
+	position:fixed;
+	right:10px;
+	color: white;
+	margin-right:5px;
+	display:inline-block;
+}
+.battery-body {
+	display:inline-block;
+	margin-bottom:10px;
+	width:50px;
+	height:20px;
+	background-color: #84CF37;
+	border:3px groove white;
+}
+.battery-body::after {
+	content:"";
+	position:absolute;
+	width:10px;
+	height:10px;
+	background-color: white;
+	top:15px;
+	right:-10px;
+	/* border:1px groove white; */
+}
+ol {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: .5vw;
+  margin: 40px auto;
+  max-width: 95vw;
+	padding: 0;
+}
+li {
+	display: flex;
+	width: 23vw;
+	height: 25vw;
+	max-width: 133px;
+	max-height: 149px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-left: 0;
+}
+li > a, a > img, li > img {
+	width: 100%;
+	height: 100%;
+}
+ol.day-grid li {
+  background-color: #eaeaea;
+  border: 1px solid #eaeaea;
+  height: 12vw;
+  max-height: 125px;
+}
+.bottom-nav {
+	background: #ffffff75;
+	border-radius: 30px;
+	margin-top: calc(100vh - 130px - 100vw)
+}
+@media screen and (min-width: 600px) {
+	.bottom-nav {
+		margin-top:0;
+	}
+}
