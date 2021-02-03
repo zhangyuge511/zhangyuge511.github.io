@@ -59,7 +59,7 @@ ol {
 li {
 	display: flex;
 	width: 23vw;
-	height: 25vw;
+	height: calc(23vw * 149 / 133);
 	max-width: 133px;
 	max-height: 149px;
   align-items: center;
