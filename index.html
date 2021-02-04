@@ -67,7 +67,7 @@
 		<div class="bottom-nav">
 			<ol>
 				<li>
-					<img src="app/phone.png" />
+					<img src="app/phone.png" onclick="play()"/>
 				</li>
 				<li>
 					<img src="app/wechat.png" />
@@ -80,7 +80,15 @@
 				</li>
 			</ol>
 		</div>
-	</div>
+    </div>
+    <script>
+        function play() {
+          var audio = document.getElementById("dudu");
+          audio.play();
+        }
+    </script>
+    <audio id="dudu" src="app/duduba.mp3"></audio>
+
 	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
