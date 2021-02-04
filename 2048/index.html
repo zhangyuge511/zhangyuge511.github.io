@@ -7,16 +7,24 @@
 	<title>张语格2048</title>
 	<link rel="stylesheet" type="text/css" href="css/2048.css"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
-	<!-- <script type="text/javascript"	src="js/jquery.min.js"></script> -->
+	<script type="text/javascript" src="/utils.js"></script>
+	<link rel="stylesheet" type="text/css" href="/menu.css"/>
 	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script type="text/javascript"	src="js/main2048.js?v=1"></script>
 	<script type="text/javascript"	src="js/showanimation2048.js"></script>
 	<script type="text/javascript"	src="js/support2048.js?v=2"></script>
+	<script type="text/javascript"	src="js/main2048.js?v=1"></script>
 </head>
 
 <body>
 	<div id="loading" style="display: block;z-index: 1;width: 100vw;height: 100vh;">加载中...</div>
-
+	<div class="dropdown">
+		<button onclick="showDD()" class="dropbtn">Menu</button>
+		<div id="myDropdown" class="dropdown-content">
+			<a href="/">Home</a>
+			<a href="/wm">Watermelon</a>
+			<a href="/2048">2048</a>
+		</div>
+	</div>
 	<div class="container">
 		<div class="heading">
 			<div class="scores-container">

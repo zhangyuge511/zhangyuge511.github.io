@@ -2,9 +2,9 @@ var board=new Array();
 var score=0;
 var hasConflicted=new Array();
 $(document).ready(function(){
-$("#loading").css("display","none");
-newgame();
-touch_move();
+	$("#loading").css("display","none");
+	newgame();
+	touch_move();
 });
 
 function newgame(){
