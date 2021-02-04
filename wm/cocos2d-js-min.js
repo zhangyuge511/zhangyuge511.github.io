@@ -18518,7 +18518,7 @@
             var e = o(t);
             if (e) {
                 var i = a[e];
-                if (i) return t.replace("res/raw-assets/", i + "raw-assets/")
+                if (i) return t.replace("res/", i + "assets/")
             }
             return t
         }, n.SubPackPipe = e.exports = l

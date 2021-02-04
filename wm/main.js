@@ -227,7 +227,7 @@ window.boot = function() {
     // init assets
     cc.AssetLibrary.init({
         libraryPath: 'res/import',
-        rawAssetsBase: 'res/raw-',
+        rawAssetsBase: 'res/',
         rawAssets: settings.rawAssets,
         packedAssets: settings.packedAssets,
         md5AssetsMap: settings.md5AssetsMap,
