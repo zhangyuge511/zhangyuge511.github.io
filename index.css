@@ -1,7 +1,13 @@
 body{
 	font-family: '-apple-system','HelveticaNeue';
 }
-
+#home-browser {
+	display:none;
+	/* margin:0 auto; */
+	height:calc(100vh - 50px);
+	width:100%;
+	border: none;
+}
 .container {
 	width:calc(100vw - 16px);
 	height:calc(100vh - 16px);

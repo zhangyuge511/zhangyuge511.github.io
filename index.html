@@ -9,48 +9,20 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Tako's Arcade</title>
-    <link rel="stylesheet" href="index.css?v=2" type="text/css">
-    <script type="text/javascript" src="/utils.js"></script>
+    <link rel="stylesheet" href="index.css?v=3" type="text/css">
+    <script type="text/javascript" src="/utils.js?v=1"></script>
 </head>
 <body style="background-color:#890822;">
-    <script type="text/javascript">
-
-        judgeLanTitle();
-
-        function judgeLanTitle() {
-            if (window.navigator.language == "zh-CN" || window.navigator.language == "zh-cn") {
-                document.title = "张语格的游戏厅";
-            } else if (window.navigator.language == "zh-TW" || window.navigator.language == "zh-HK") {
-                document.title = "張語格的遊戲廳";
-            } else {
-                document.title = "Tako's Arcade";
-            }
-        }
-        function goTo(src) {
-            document.getElementsByTagName('ol')[0].style.display = "none";
-            document.getElementsByTagName('ol')[1].style.display = "none";
-            document.getElementsByTagName('img')[0].src = "app/home.png";
-            document.getElementById('home-browser').src = src;
-            document.getElementById('home-browser').style.display = "block";
-        }
-        function goHome() {
-            document.getElementsByTagName('ol')[0].style.display = "grid";
-            document.getElementsByTagName('ol')[1].style.display = "grid";
-            document.getElementsByTagName('img')[0].src = "app/0511.png";
-            document.getElementById('home-browser').style.display = "none";
-        }
-    </script>
 	<div class="container">
 		<div class="status-bar">
             <div class="time" onclick="goHome();"><img src="app/0511.png" /></div>
             <div class="tako"><img src="app/tako.png" /></div>
 			<div class="battery">
-				
 				<div class="battery-body"></div>
 				<div class="battery-head"></div>
 			</div>
         </div>
-        <iframe allow="autoplay" width=320 height=440 style="display:none;margin:auto auto;height:94vh;width:95vw;" id="home-browser"></iframe>
+        <iframe allow="autoplay" id="home-browser"></iframe>
 		<ol>
 			<li>
 				<img src="app/weibo.png" onclick="goTo('https://m.weibo.cn/u/3050783091')"/>
