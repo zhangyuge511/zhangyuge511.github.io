@@ -1,0 +1,92 @@
+body{
+	font-family: '-apple-system','HelveticaNeue';
+}
+.container {
+	width:calc(100vw - 16px);
+	height:calc(100vh - 16px);
+	background-image:url("app/light.png");
+	background-size:50% auto;
+	background-position: center;
+	background-repeat:no-repeat;
+}
+.status-bar {
+	height: 30px;
+}
+.time {
+	position:fixed;
+	left:0;
+	margin-left:5px;
+}
+.tako {
+	position:fixed;
+	right:35px;
+}
+.time > img, .tako > img {
+	width: 20vw;
+	max-width: 108px;
+}
+.battery {
+	position:fixed;
+	right:10px;
+	color: white;
+	margin-right:5px;
+	top:calc(20vw * 42 / 108 / 2);
+}
+.battery-body {
+	margin-bottom:10px;
+	width:20px;
+	height:10px;
+	background-color: #84CF37;
+	border:3px groove white;
+}
+.battery-body::after {
+	content:"";
+	position:absolute;
+	width:5px;
+	height:5px;
+	background-color: white;
+	top:6px;
+	right:-5px;
+}
+ol {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: .5vw;
+  margin: 40px auto;
+  max-width: 95vw;
+	padding: 0;
+}
+li {
+	display: flex;
+	width: 23vw;
+	height: calc(23vw * 149 / 133);
+	max-width: 133px;
+	max-height: 149px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-left: 0;
+}
+li > a, a > img, li > img {
+	width: 100%;
+	height: 100%;
+}
+ol.day-grid li {
+  background-color: #eaeaea;
+  border: 1px solid #eaeaea;
+  height: 12vw;
+  max-height: 125px;
+}
+.bottom-nav {
+	background: #ffffff75;
+	border-radius: 30px;
+	margin-top: calc(100vh - 100px - 100vw)
+}
+@media screen and (min-width: 600px) {
+	.bottom-nav {
+		margin-top:0;
+	}
+	.battery {
+		top: 21px;
+	}
+}

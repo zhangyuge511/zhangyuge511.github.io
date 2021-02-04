@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+		<meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<title>Tako's Arcade</title>
+		<link rel="stylesheet" href="index.css?v=2" type="text/css">
+</head>
+<body style="background-color:#890822;">
+    <script type="text/javascript">
+
+        judgeLanTitle();
+
+        function judgeLanTitle() {
+            if (window.navigator.language == "zh-CN" || window.navigator.language == "zh-cn") {
+                document.title = "张语格的游戏厅";
+            } else if (window.navigator.language == "zh-TW" || window.navigator.language == "zh-HK") {
+                document.title = "張語格的遊戲廳";
+            } else {
+                document.title = "Tako's Arcade";
+            }
+        }
+    </script>
+	<div class="container">
+		<div class="status-bar">
+            <div class="time"><img src="app/0511.png" /></div>
+            <div class="tako"><img src="app/tako.png" /></div>
+			<div class="battery">
+				
+				<div class="battery-body"></div>
+				<div class="battery-head"></div>
+			</div>
+		</div>
+		<ol>
+			<li>
+				<a href="https://weibo.com/u/3050783091"><img src="app/weibo.png" /></a>
+			</li>
+			<li>
+				<a href="https://space.bilibili.com/605599077"><img src="app/bilibili.png" /></a>
+			</li>
+			<li>
+				<a href="https://m.oasis.weibo.cn/v1/h5/share?uid=3050783091"><img src="app/oasis.png" /></a>
+			</li>
+			<li>
+                <a href="https://v.douyin.com/JTFXD3W/"><img src="app/douyin.png" /></a>
+			</li>
+			<li>
+				<a href="https://www.xiaohongshu.com/user/profile/5c12308d000000000501784e"><img src="app/xhs.png" /></a>
+			</li>
+			<li>
+				<a href="/wm"><img src="app/wm.png" /></a>
+			</li>
+			<li>
+				<a href="/2048"><img src="app/2048.png" /></a>
+			</li>
+			<li>
+				<a href="/linkup"><img src="app/linkup.png" /></a>
+			</li>
+			<li>
+				<a href="/rhythm"><img src="app/rhythm.png" /></a>
+			</li>
+			<li>
+				<img src="app/more.png" />
+			</li>
+		</ol>
+		<div class="bottom-nav">
+			<ol>
+				<li>
+					<img src="app/phone.png" onclick="play()"/>
+				</li>
+				<li>
+					<img src="app/wechat.png" />
+				</li>
+				<li>
+					<a href="https://baike.baidu.com/item/%E5%BC%A0%E8%AF%AD%E6%A0%BC"><img src="app/safari.png" /></a>
+				</li>
+				<li>
+					<a href="/music"><img src="app/music.png" /></a>
+				</li>
+			</ol>
+		</div>
+    </div>
+    <script>
+        function play() {
+          var audio = document.getElementById("dudu");
+          audio.play();
+        }
+    </script>
+    <audio id="dudu" src="app/duduba.mp3"></audio>
+
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</body>
+</html>
